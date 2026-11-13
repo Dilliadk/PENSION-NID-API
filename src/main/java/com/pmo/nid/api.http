@@ -1,0 +1,22 @@
+# @server = http://localhost:8085
+@server = https://demoipms.fcgo.gov.np/nid-api
+
+### Verify NIN ---------------------------------------
+POST {{server}}/api/nid/verify-nin HTTP/1.1
+Content-Type: application/json
+
+{"nin": "029-270-280-0"}
+
+
+### Citizen Data ---------------------------------------
+POST {{server}}/api/nid/citizen-data HTTP/1.1
+Content-Type: application/json
+
+{"nin": "029-270-280-0"}
+
+
+### Biometric Auth ---------------------------------------
+POST {{server}}/api/nid/biometric-auth HTTP/1.1
+Content-Type: application/json
+
+{"nin": "029-270-280-0", "imageData": [1]}

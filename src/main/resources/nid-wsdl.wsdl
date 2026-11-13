@@ -1,0 +1,1685 @@
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://wsdl.eservices.nidmc.morpho.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://type.eservices.nidmc.morpho.com/" name="OnlineEservices" targetNamespace="http://wsdl.eservices.nidmc.morpho.com/">
+<wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://type.eservices.nidmc.morpho.com/" targetNamespace="http://type.eservices.nidmc.morpho.com/" version="1.0">
+<xs:element name="addressUpdate" type="tns:addressUpdate"/>
+<xs:element name="addressUpdateError" type="tns:addressUpdateError"/>
+<xs:element name="addressUpdateResponse" type="tns:addressUpdateResponse"/>
+<xs:element name="alphaAuth" type="tns:alphaAuth"/>
+<xs:element name="alphaAuthError" type="tns:alphaAuthError"/>
+<xs:element name="alphaAuthResponse" type="tns:alphaAuthResponse"/>
+<xs:element name="biometricAuth" type="tns:biometricAuth"/>
+<xs:element name="biometricAuthError" type="tns:biometricAuthError"/>
+<xs:element name="biometricAuthResponse" type="tns:biometricAuthResponse"/>
+<xs:element name="cardAuth" type="tns:cardAuth"/>
+<xs:element name="cardAuthError" type="tns:cardAuthError"/>
+<xs:element name="cardAuthResponse" type="tns:cardAuthResponse"/>
+<xs:element name="checkCitizenRequestStatus" type="tns:checkCitizenRequestStatus"/>
+<xs:element name="checkCitizenRequestStatusError" type="tns:checkCitizenRequestStatusError"/>
+<xs:element name="checkCitizenRequestStatusResponse" type="tns:checkCitizenRequestStatusResponse"/>
+<xs:element name="citizenDataProviderError" type="tns:citizenDataProviderError"/>
+<xs:element name="citizenDataProviderForLandRegistration" type="tns:citizenDataProviderForLandRegistration"/>
+<xs:element name="citizenDataProviderForLandRegistrationResponse" type="tns:citizenDataProviderForLandRegistrationResponse"/>
+<xs:element name="citizenDataProviderForLandRegistrationWithBiometricAuth" type="tns:citizenDataProviderForLandRegistrationWithBiometricAuth"/>
+<xs:element name="citizenDataProviderForLandRegistrationWithBiometricAuthError" type="tns:citizenDataProviderForLandRegistrationWithBiometricAuthError"/>
+<xs:element name="citizenDataProviderForLandRegistrationWithBiometricAuthResponse" type="tns:citizenDataProviderForLandRegistrationWithBiometricAuthResponse"/>
+<xs:element name="citizenDataProviderForLandRegistrationWithCardAuth" type="tns:citizenDataProviderWithCardAuthRequestType"/>
+<xs:element name="citizenDataProviderForLandRegistrationWithCardAuthError" type="tns:citizenDataProviderForLandRegistrationWithCardAuthError"/>
+<xs:element name="citizenDataProviderForLandRegistrationWithCardAuthResponse" type="tns:citizenDataProviderForLandRegistrationWithCardAuthResponse"/>
+<xs:element name="citizenDataProviderForPublicServiceCommissions" type="tns:citizenDataProviderForPublicServiceCommissions"/>
+<xs:element name="citizenDataProviderForPublicServiceCommissionsResponse" type="tns:citizenDataProviderForPublicServiceCommissionsResponse"/>
+<xs:element name="citizenDataProviderForPublicServiceCommissionsWithBiometricAuth" type="tns:citizenDataProviderForPublicServiceCommissionsWithBiometricAuth"/>
+<xs:element name="citizenDataProviderForPublicServiceCommissionsWithBiometricAuthError" type="tns:citizenDataProviderForPublicServiceCommissionsWithBiometricAuthError"/>
+<xs:element name="citizenDataProviderForPublicServiceCommissionsWithBiometricAuthResponse" type="tns:citizenDataProviderForPublicServiceCommissionsWithBiometricAuthResponse"/>
+<xs:element name="citizenDataProviderForPublicServiceCommissionsWithCardAuth" type="tns:citizenDataProviderWithCardAuthRequestType"/>
+<xs:element name="citizenDataProviderForPublicServiceCommissionsWithCardAuthError" type="tns:citizenDataProviderForPublicServiceCommissionsWithCardAuthError"/>
+<xs:element name="citizenDataProviderForPublicServiceCommissionsWithCardAuthResponse" type="tns:citizenDataProviderForPublicServiceCommissionsWithCardAuthResponse"/>
+<xs:element name="citizenDataProviderWithBiometricAuth" type="tns:citizenDataProviderWithBiometricAuth"/>
+<xs:element name="citizenDataProviderWithBiometricAuthError" type="tns:citizenDataProviderWithBiometricAuthError"/>
+<xs:element name="citizenDataProviderWithBiometricAuthResponse" type="tns:citizenDataProviderWithBiometricAuthResponse"/>
+<xs:element name="citizenDataProviderWithCardAuth" type="tns:citizenDataProviderWithCardAuthRequestType"/>
+<xs:element name="citizenDataProviderWithCardAuthError" type="tns:citizenDataProviderWithCardAuthError"/>
+<xs:element name="citizenDataProviderWithCardAuthResponse" type="tns:citizenDataProviderWithCardAuthResponse"/>
+<xs:element name="customHeader" type="tns:customHeaderType"/>
+<xs:element name="dataConsultationWithBiometricAuth" type="tns:dataConsultationWithBiometricAuth"/>
+<xs:element name="dataConsultationWithBiometricAuthError" type="tns:dataConsultationWithBiometricAuthError"/>
+<xs:element name="dataConsultationWithBiometricAuthResponse" type="tns:dataConsultationWithBiometricAuthResponse"/>
+<xs:element name="dataConsultationWithCardAuth" type="tns:dataConsultationWithCardAuth"/>
+<xs:element name="dataConsultationWithCardAuthError" type="tns:dataConsultationWithCardAuthError"/>
+<xs:element name="dataConsultationWithCardAuthResponse" type="tns:dataConsultationWithCardAuthResponse"/>
+<xs:element name="deceasedStatusChange" type="tns:deceasedStatusChange"/>
+<xs:element name="deceasedStatusChangeError" type="tns:deceasedStatusChangeError"/>
+<xs:element name="deceasedStatusChangeResponse" type="tns:deceasedStatusChangeResponse"/>
+<xs:element name="generateVoterList" type="tns:generateVoterList"/>
+<xs:element name="generateVoterListError" type="tns:generateVoterListError"/>
+<xs:element name="generateVoterListResponse" type="tns:generateVoterListResponse"/>
+<xs:element name="matchOnCardLog" type="tns:matchOnCardLog"/>
+<xs:element name="matchOnCardLogError" type="tns:matchOnCardLogError"/>
+<xs:element name="matchOnCardLogResponse" type="tns:matchOnCardLogResponse"/>
+<xs:element name="requestNewNinError" type="tns:requestNewNinError"/>
+<xs:element name="requestNewNinRequest" type="tns:requestNewNinRequest"/>
+<xs:element name="requestNewNinResponse" type="tns:requestNewNinResponse"/>
+<xs:element name="verifyNIN" type="tns:verifyNIN"/>
+<xs:element name="verifyNINError" type="tns:verifyNINError"/>
+<xs:element name="verifyNINResponse" type="tns:verifyNINResponse"/>
+<xs:complexType name="checkCitizenRequestStatus">
+<xs:sequence>
+<xs:element name="request" type="tns:checkCitizenRequestStatusType"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="checkCitizenRequestStatusType">
+<xs:complexContent>
+<xs:extension base="tns:requestBaseType">
+<xs:sequence>
+<xs:element minOccurs="0" name="nin" type="tns:nin"/>
+<xs:element minOccurs="0" name="requestIdentifier" type="tns:requestIdentifier"/>
+<xs:element minOccurs="0" name="withCardstatus" type="xs:boolean"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="requestBaseType">
+<xs:sequence>
+<xs:element form="qualified" minOccurs="0" name="customHeader" type="tns:customHeaderType"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="nin">
+<xs:sequence>
+<xs:element name="identifier" type="xs:string"/>
+<xs:element name="source" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="requestIdentifier">
+<xs:sequence>
+<xs:element minOccurs="0" name="identifier" type="xs:string"/>
+<xs:element minOccurs="0" name="source" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="customHeaderType">
+<xs:sequence/>
+<xs:attribute name="qualifiedUser" type="xs:string"/>
+<xs:attribute name="qualifiedOrigin" type="xs:string"/>
+<xs:attribute name="purpose" type="xs:string"/>
+<xs:attribute name="timeStamp" type="xs:dateTime"/>
+</xs:complexType>
+<xs:complexType name="generateVoterListType">
+<xs:complexContent>
+<xs:extension base="tns:requestBaseType">
+<xs:sequence>
+<xs:element minOccurs="0" name="criteria" type="tns:criteria"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="criteria">
+<xs:sequence>
+<xs:element minOccurs="0" name="district" type="xs:string"/>
+<xs:element minOccurs="0" name="rur" type="xs:string"/>
+<xs:element minOccurs="0" name="village" type="xs:string"/>
+<xs:element minOccurs="0" name="ward" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="verifyNINType">
+<xs:complexContent>
+<xs:extension base="tns:requestBaseType">
+<xs:sequence>
+<xs:element minOccurs="0" name="nin" type="tns:nin"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderRequest">
+<xs:complexContent>
+<xs:extension base="tns:requestBaseType">
+<xs:sequence>
+<xs:element minOccurs="0" name="nin" type="tns:nin"/>
+<xs:element minOccurs="0" name="cc-number-loc" type="xs:string"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderForLandRegistrationType">
+<xs:complexContent>
+<xs:extension base="tns:citizenDataProviderRequest">
+<xs:sequence/>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderForPublicServiceCommissionsType">
+<xs:complexContent>
+<xs:extension base="tns:citizenDataProviderRequest">
+<xs:sequence/>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="requestNewNinRequestType">
+<xs:complexContent>
+<xs:extension base="tns:requestBaseType">
+<xs:sequence>
+<xs:element minOccurs="0" name="identity" type="tns:identityData"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="identityData">
+<xs:sequence>
+<xs:element minOccurs="0" name="birth_district_place" type="xs:string"/>
+<xs:element minOccurs="0" name="birth_district_place_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="cc_type" type="xs:string"/>
+<xs:element minOccurs="0" name="dob" type="xs:string"/>
+<xs:element minOccurs="0" name="dob_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="f_cc_issuing_date_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="f_cc_issuing_district_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="f_cc_number_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="f_full_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="f_nin" type="xs:string"/>
+<xs:element minOccurs="0" name="first_name" type="xs:string"/>
+<xs:element minOccurs="0" name="first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gender" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_nin" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_full_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_cc_number_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_cc_issuing_district_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_cc_issuing_date_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_nin" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_full_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_cc_number_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_cc_issuing_district_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_cc_issuing_date_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="last_name" type="xs:string"/>
+<xs:element minOccurs="0" name="last_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="m_nin" type="xs:string"/>
+<xs:element minOccurs="0" name="m_cc_number_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="m_cc_issuing_district_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="m_cc_issuing_date_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="m_full_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="middle_name" type="xs:string"/>
+<xs:element minOccurs="0" name="middle_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_district" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_state" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_rur_mun" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_village_tol" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_ward" type="xs:string"/>
+<xs:element minOccurs="0" name="unknown_father_status" type="xs:string"/>
+<xs:element minOccurs="0" name="g_natural_person" type="xs:string"/>
+<xs:element minOccurs="0" name="g_cc_issuing_date_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="g_cc_issuing_district_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="g_cc_number_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="g_nin" type="xs:string"/>
+<xs:element minOccurs="0" name="g_full_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="w_cc_number_1" type="xs:string"/>
+<xs:element minOccurs="0" name="w_cc_issuing_date_loc_1" type="xs:string"/>
+<xs:element minOccurs="0" name="w_cc_issuing_district_loc_1" type="xs:string"/>
+<xs:element minOccurs="0" name="w_full_name_loc_1" type="xs:string"/>
+<xs:element minOccurs="0" name="w_nin_1" type="xs:string"/>
+<xs:element minOccurs="0" name="w_cc_number_2" type="xs:string"/>
+<xs:element minOccurs="0" name="w_cc_issuing_date_loc_2" type="xs:string"/>
+<xs:element minOccurs="0" name="w_cc_issuing_district_loc_2" type="xs:string"/>
+<xs:element minOccurs="0" name="w_full_name_loc_2" type="xs:string"/>
+<xs:element minOccurs="0" name="w_nin_2" type="xs:string"/>
+<xs:element minOccurs="0" name="w_cc_number_3" type="xs:string"/>
+<xs:element minOccurs="0" name="w_cc_issuing_date_loc_3" type="xs:string"/>
+<xs:element minOccurs="0" name="w_cc_issuing_district_loc_3" type="xs:string"/>
+<xs:element minOccurs="0" name="w_full_name_loc_3" type="xs:string"/>
+<xs:element minOccurs="0" name="w_nin_3" type="xs:string"/>
+<xs:element minOccurs="0" name="w_cc_number_4" type="xs:string"/>
+<xs:element minOccurs="0" name="w_cc_issuing_date_loc_4" type="xs:string"/>
+<xs:element minOccurs="0" name="w_cc_issuing_district_loc_4" type="xs:string"/>
+<xs:element minOccurs="0" name="w_full_name_loc_4" type="xs:string"/>
+<xs:element minOccurs="0" name="w_nin_4" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="checkCitizenRequestStatusResponse">
+<xs:sequence>
+<xs:element name="applicationStatus" type="tns:applicationStatusType"/>
+<xs:element name="applicationStatusUpdateDate" type="xs:anySimpleType"/>
+<xs:element minOccurs="0" name="cardStatusUpdateDate" type="xs:anySimpleType"/>
+<xs:element minOccurs="0" name="cardStatus" type="tns:cardStatusType"/>
+<xs:element minOccurs="0" name="reason" type="tns:rejectReasons"/>
+<xs:element minOccurs="0" name="nin" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="checkCitizenRequestStatusError">
+<xs:sequence>
+<xs:element name="code" type="xs:int"/>
+<xs:element name="message" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderForLandRegistrationWithBiometricAuth">
+<xs:sequence>
+<xs:element name="customHeader" type="tns:customHeaderType"/>
+<xs:element name="nin" type="tns:nin"/>
+<xs:element name="biometricData" type="tns:biometricDataType"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="biometricDataType">
+<xs:sequence>
+<xs:element minOccurs="0" name="fingerPrintData" type="tns:fingerPrintDataType"/>
+<xs:element minOccurs="0" name="irisData" type="tns:irisDataType"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="fingerPrintDataType">
+<xs:sequence>
+<xs:element name="fingerPosition" type="tns:fingerPosition"/>
+<xs:element name="fingerImageResolution" type="xs:int"/>
+<xs:element name="fingerImageType" type="tns:imageType"/>
+<xs:element name="fingerImage" type="xs:base64Binary"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="irisDataType">
+<xs:sequence>
+<xs:element name="irisPosition" type="tns:irisPosition"/>
+<xs:element name="irisImageResolution" type="xs:int"/>
+<xs:element name="irismageType" type="tns:imageType"/>
+<xs:element name="irisData" type="xs:base64Binary"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderForLandRegistrationWithBiometricAuthResponse">
+<xs:sequence>
+<xs:element name="searchResult" type="tns:citizenDataProviderWithBiometricAuthResults"/>
+<xs:element minOccurs="0" name="citizenData" type="tns:citizenDataWithAuth"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataWithAuth">
+<xs:sequence>
+<xs:element name="first_name" type="xs:string"/>
+<xs:element minOccurs="0" name="middle_name" type="xs:string"/>
+<xs:element name="last_name" type="xs:string"/>
+<xs:element name="first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="middle_name_loc" type="xs:string"/>
+<xs:element name="last_name_loc" type="xs:string"/>
+<xs:element name="dob" type="xs:string"/>
+<xs:element name="dob_loc" type="xs:string"/>
+<xs:element name="gender" type="xs:string"/>
+<xs:element name="gender_loc" type="xs:string"/>
+<xs:element name="marital_status" type="xs:string"/>
+<xs:element name="marital_status_loc" type="xs:string"/>
+<xs:element name="unknown_father" type="xs:string"/>
+<xs:element minOccurs="0" name="birth_district_place" type="xs:string"/>
+<xs:element minOccurs="0" name="birth_district_place_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_state" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_district" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_rur_mun" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_ward" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_village_tol" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_state_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_district_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_rur_mun_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_ward_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_village_tol_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="temp_state" type="xs:string"/>
+<xs:element minOccurs="0" name="temp_district" type="xs:string"/>
+<xs:element minOccurs="0" name="temp_rur_mun" type="xs:string"/>
+<xs:element minOccurs="0" name="temp_ward" type="xs:string"/>
+<xs:element minOccurs="0" name="temp_village_tol" type="xs:string"/>
+<xs:element minOccurs="0" name="temp_state_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="temp_district_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="temp_rur_mun_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="temp_ward_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="temp_village_tol_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="cc_number" type="xs:string"/>
+<xs:element minOccurs="0" name="cc_number_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="cc_issuing_district" type="xs:string"/>
+<xs:element minOccurs="0" name="cc_issuing_district_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="cc_issuing_date" type="xs:string"/>
+<xs:element minOccurs="0" name="cc_issuing_date_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="cc_type" type="xs:string"/>
+<xs:element minOccurs="0" name="cc_type_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="mobile_phone" type="xs:string"/>
+<xs:element minOccurs="0" name="telephone" type="xs:string"/>
+<xs:element minOccurs="0" name="telephone_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="f_nin" type="xs:string"/>
+<xs:element minOccurs="0" name="f_first_name" type="xs:string"/>
+<xs:element minOccurs="0" name="f_middle_name" type="xs:string"/>
+<xs:element minOccurs="0" name="f_last_name" type="xs:string"/>
+<xs:element minOccurs="0" name="f_first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="f_middle_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="f_last_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="f_cc_number_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="f_cc_issuing_district_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="f_cc_issuing_date_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="f_nationality" type="xs:string"/>
+<xs:element minOccurs="0" name="m_nin" type="xs:string"/>
+<xs:element minOccurs="0" name="m_first_name" type="xs:string"/>
+<xs:element minOccurs="0" name="m_middle_name" type="xs:string"/>
+<xs:element minOccurs="0" name="m_last_name" type="xs:string"/>
+<xs:element minOccurs="0" name="m_first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="m_middle_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="m_last_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="m_cc_number_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="m_cc_issuing_district_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="m_cc_issuing_date_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="m_nationality" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_nin" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_first_name" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_middle_name" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_last_name" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_middle_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_last_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_cc_number_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_cc_issuing_district_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_cc_issuing_date_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_nationality" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_nin" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_first_name" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_middle_name" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_last_name" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_middle_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_last_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_cc_number_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_cc_issuing_district_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_cc_issuing_date_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_nationality" type="xs:string"/>
+<xs:element minOccurs="0" name="s_nin" type="xs:string"/>
+<xs:element minOccurs="0" name="s_first_name" type="xs:string"/>
+<xs:element minOccurs="0" name="s_middle_name" type="xs:string"/>
+<xs:element minOccurs="0" name="s_last_name" type="xs:string"/>
+<xs:element minOccurs="0" name="s_first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="s_middle_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="s_last_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="s_cc_number_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="s_cc_issuing_district_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="s_cc_issuing_date_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="s_nationality" type="xs:string"/>
+<xs:element minOccurs="0" name="g_nin" type="xs:string"/>
+<xs:element minOccurs="0" name="g_first_name" type="xs:string"/>
+<xs:element minOccurs="0" name="g_middle_name" type="xs:string"/>
+<xs:element minOccurs="0" name="g_last_name" type="xs:string"/>
+<xs:element minOccurs="0" name="g_first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="g_middle_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="g_last_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="g_cc_number_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="g_cc_issuing_district_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="g_cc_issuing_date_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="g_is_natural_person" type="xs:boolean"/>
+<xs:element minOccurs="0" name="cast" type="xs:string"/>
+<xs:element minOccurs="0" name="cast_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="religion" type="xs:string"/>
+<xs:element minOccurs="0" name="religion_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="education_level" type="xs:string"/>
+<xs:element minOccurs="0" name="education_level_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="profession" type="xs:string"/>
+<xs:element minOccurs="0" name="profession_loc" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderForLandRegistrationWithBiometricAuthError">
+<xs:sequence>
+<xs:element name="code" type="xs:int"/>
+<xs:element name="message" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderWithCardAuthRequestType">
+<xs:sequence>
+<xs:element name="customHeader" type="tns:customHeaderType"/>
+<xs:element name="nin" type="tns:nin"/>
+<xs:element name="documentLogicalNumber" type="tns:documentLogicalNumber"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="documentLogicalNumber">
+<xs:sequence>
+<xs:element name="documentLogicalNumber" type="xs:string"/>
+<xs:element name="product" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderWithCardAuthResponse">
+<xs:sequence>
+<xs:element name="searchResult" type="tns:citizenDataProviderWithCardAuthResults"/>
+<xs:element minOccurs="0" name="citizenDataWithAuth" type="tns:citizenDataWithAuth"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderWithCardAuthError">
+<xs:sequence>
+<xs:element name="code" type="xs:int"/>
+<xs:element name="message" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="cardAuth">
+<xs:sequence>
+<xs:element name="customHeader" type="tns:customHeaderType"/>
+<xs:element name="nin" type="tns:nin"/>
+<xs:element name="documentLogicalNumber">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="documentLogicalNumber" type="xs:string"/>
+<xs:element name="product" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="cardAuthResponse">
+<xs:sequence>
+<xs:element name="cardAuthResult" type="tns:cardAuthResult"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="cardAuthError">
+<xs:sequence>
+<xs:element name="code" type="xs:int"/>
+<xs:element name="message" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="biometricAuth">
+<xs:sequence>
+<xs:element name="customHeader" type="tns:customHeaderType"/>
+<xs:element name="nin" type="tns:nin"/>
+<xs:element name="biometricData" type="tns:biometricDataType"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="biometricAuthResponse">
+<xs:sequence>
+<xs:element name="biometricAuthResult" type="tns:biometricAuthResult"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="biometricAuthError">
+<xs:sequence>
+<xs:element name="code" type="xs:int"/>
+<xs:element name="message" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderForPublicServiceCommissions">
+<xs:sequence>
+<xs:element minOccurs="0" name="request" type="tns:citizenDataProviderForPublicServiceCommissionsType"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderForPublicServiceCommissionsResponse">
+<xs:sequence>
+<xs:element name="searchResult" type="tns:citizenDataProviderSearchResults"/>
+<xs:element minOccurs="0" name="citizenDataForPublicServiceCommision" type="tns:citizenDataSpecificToPublicServiceComissions"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataSpecificToPublicServiceComissions">
+<xs:sequence>
+<xs:element name="nin_loc" type="xs:string"/>
+<xs:element name="first_name" type="xs:string"/>
+<xs:element minOccurs="0" name="middle_name" type="xs:string"/>
+<xs:element name="last_name" type="xs:string"/>
+<xs:element name="first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="middle_name_loc" type="xs:string"/>
+<xs:element name="last_name_loc" type="xs:string"/>
+<xs:element name="dob" type="xs:string"/>
+<xs:element name="dob_loc" type="xs:string"/>
+<xs:element name="gender" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_state" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_district" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_rur_mun" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_ward" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_village_tol" type="xs:string"/>
+<xs:element minOccurs="0" name="cc_number" type="xs:string"/>
+<xs:element minOccurs="0" name="cc_issuing_district" type="xs:string"/>
+<xs:element minOccurs="0" name="cc_issuing_date" type="xs:string"/>
+<xs:element minOccurs="0" name="f_first_name" type="xs:string"/>
+<xs:element minOccurs="0" name="f_middle_name" type="xs:string"/>
+<xs:element minOccurs="0" name="f_last_name" type="xs:string"/>
+<xs:element minOccurs="0" name="m_first_name" type="xs:string"/>
+<xs:element minOccurs="0" name="m_middle_name" type="xs:string"/>
+<xs:element minOccurs="0" name="m_last_name" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_first_name" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_middle_name" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_last_name" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_first_name" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_middle_name" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_last_name" type="xs:string"/>
+<xs:element minOccurs="0" name="s_first_name" type="xs:string"/>
+<xs:element minOccurs="0" name="s_middle_name" type="xs:string"/>
+<xs:element minOccurs="0" name="s_last_name" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_state_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_district_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_rur_mun_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_ward_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_village_tol_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="cc_number_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="cc_issuing_district_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="cc_issuing_date_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="f_first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="f_middle_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="f_last_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="m_first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="m_middle_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="m_last_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_middle_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_last_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_middle_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_last_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="s_first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="s_middle_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="s_last_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="cast" type="xs:string"/>
+<xs:element minOccurs="0" name="cast_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="religion" type="xs:string"/>
+<xs:element minOccurs="0" name="religion_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="portrait_image" type="xs:base64Binary"/>
+<xs:element minOccurs="0" name="portrait_status" type="tns:portraitStatus"/>
+<xs:element minOccurs="0" name="signature" type="xs:base64Binary"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderError">
+<xs:sequence>
+<xs:element name="code" type="xs:int"/>
+<xs:element name="message" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="matchOnCardLog">
+<xs:sequence>
+<xs:element name="customHeader" type="tns:customHeaderType"/>
+<xs:element name="nin" type="tns:nin"/>
+<xs:element name="matchOnCardResult" type="tns:matchOnCardResult"/>
+<xs:element name="dateOfMatching" type="xs:date"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="matchOnCardLogResponse">
+<xs:sequence>
+<xs:element name="logResult" type="tns:logResult"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="matchOnCardLogError">
+<xs:sequence>
+<xs:element name="code" type="xs:int"/>
+<xs:element name="message" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderForPublicServiceCommissionsWithCardAuthResponse">
+<xs:sequence>
+<xs:element name="searchResult" type="tns:citizenDataProviderWithCardAuthResults"/>
+<xs:element minOccurs="0" name="citizenDataWithAuth" type="tns:citizenDataWithAuth"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderForPublicServiceCommissionsWithCardAuthError">
+<xs:sequence>
+<xs:element name="code" type="xs:int"/>
+<xs:element name="message" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderWithBiometricAuth">
+<xs:sequence>
+<xs:element name="customHeader" type="tns:customHeaderType"/>
+<xs:element name="nin" type="tns:nin"/>
+<xs:element name="biometricData" type="tns:biometricDataType"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderWithBiometricAuthResponse">
+<xs:sequence>
+<xs:element name="searchResult" type="tns:citizenDataProviderWithBiometricAuthResults"/>
+<xs:element minOccurs="0" name="citizenData" type="tns:citizenDataWithAuth"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderWithBiometricAuthError">
+<xs:sequence>
+<xs:element name="code" type="xs:int"/>
+<xs:element name="message" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderForLandRegistration">
+<xs:sequence>
+<xs:element minOccurs="0" name="request" type="tns:citizenDataProviderForLandRegistrationType"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderForLandRegistrationResponse">
+<xs:sequence>
+<xs:element name="searchResult" type="tns:citizenDataProviderSearchResults"/>
+<xs:element minOccurs="0" name="citizenDataForLandlanRegistration" type="tns:citizenDataSpecificToLandRegistrations"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataSpecificToLandRegistrations">
+<xs:sequence>
+<xs:element name="nin_loc" type="xs:string"/>
+<xs:element name="first_name" type="xs:string"/>
+<xs:element minOccurs="0" name="middle_name" type="xs:string"/>
+<xs:element name="last_name" type="xs:string"/>
+<xs:element name="first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="middle_name_loc" type="xs:string"/>
+<xs:element name="last_name_loc" type="xs:string"/>
+<xs:element name="dob" type="xs:string"/>
+<xs:element name="dob_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_state_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_district_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_rur_mun_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_ward_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_village_tol_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="cc_number_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="cc_issuing_district_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="cc_issuing_date_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="f_first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="f_middle_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="f_last_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="m_first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="m_middle_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="m_last_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_middle_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_last_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_middle_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_last_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="s_first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="s_middle_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="s_last_name_loc" type="xs:string"/>
+<xs:element name="gender_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="mobile_phone" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="alphaAuth">
+<xs:sequence>
+<xs:element name="customHeader" type="tns:customHeaderType"/>
+<xs:element name="nin" type="tns:nin"/>
+<xs:element name="demographicData" type="tns:demographicDataType"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="demographicDataType">
+<xs:sequence>
+<xs:element minOccurs="0" name="fullname" type="xs:string"/>
+<xs:element minOccurs="0" name="fullnameLoc" type="xs:string"/>
+<xs:element minOccurs="0" name="address" type="tns:addressType"/>
+<xs:element name="birthdate" type="xs:date"/>
+<xs:element minOccurs="0" name="fatherFullName" type="xs:string"/>
+<xs:element minOccurs="0" name="fatherFullNameLoc" type="xs:string"/>
+<xs:element minOccurs="0" name="motherFullName" type="xs:string"/>
+<xs:element minOccurs="0" name="motherFullNameLoc" type="xs:string"/>
+<xs:element minOccurs="0" name="grandFatherFullName" type="xs:string"/>
+<xs:element minOccurs="0" name="grandFatherFullNameLoc" type="xs:string"/>
+<xs:element minOccurs="0" name="grandMotherFullName" type="xs:string"/>
+<xs:element minOccurs="0" name="grandMotherFullNameLoc" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="addressType">
+<xs:sequence>
+<xs:element name="state" type="xs:int"/>
+<xs:element name="district" type="xs:int"/>
+<xs:element name="municipality" type="xs:int"/>
+<xs:element name="wardNumber" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="alphaAuthResponse">
+<xs:sequence>
+<xs:element name="alphaAuthResult" type="tns:alphaAuthResult"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="alphaAuthError">
+<xs:sequence>
+<xs:element name="code" type="xs:int"/>
+<xs:element name="message" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="addressUpdate">
+<xs:sequence>
+<xs:element name="customHeader" type="tns:customHeaderType"/>
+<xs:element name="nin" type="tns:nin"/>
+<xs:element name="demographicData" type="tns:demographicDataType"/>
+<xs:element name="oldAddress" type="tns:addressType"/>
+<xs:element name="newAddress" type="tns:fullAddressType"/>
+<xs:element name="reason" type="tns:addressChangeReason"/>
+<xs:element name="dateOfChange" type="xs:date"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="fullAddressType">
+<xs:sequence>
+<xs:element name="state" type="xs:int"/>
+<xs:element name="district" type="xs:int"/>
+<xs:element name="municipality" type="xs:int"/>
+<xs:element name="wardNumber" type="xs:int"/>
+<xs:element name="villageTol" type="xs:string"/>
+<xs:element name="villageTolLoc" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="addressUpdateResponse">
+<xs:sequence>
+<xs:element name="status" type="tns:updateAddressResponseCode"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="addressUpdateError">
+<xs:sequence>
+<xs:element name="code" type="xs:int"/>
+<xs:element name="message" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderForLandRegistrationWithCardAuthResponse">
+<xs:sequence>
+<xs:element name="searchResult" type="tns:citizenDataProviderWithCardAuthResults"/>
+<xs:element minOccurs="0" name="citizenDataWithAuth" type="tns:citizenDataWithAuth"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderForLandRegistrationWithCardAuthError">
+<xs:sequence>
+<xs:element name="code" type="xs:int"/>
+<xs:element name="message" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="deceasedStatusChange">
+<xs:sequence>
+<xs:element name="customHeader" type="tns:customHeaderType"/>
+<xs:element name="nin" type="tns:nin"/>
+<xs:element name="demographicData" type="tns:demographicDataType"/>
+<xs:element name="dateOfDeath" type="xs:date"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="deceasedStatusChangeResponse">
+<xs:sequence>
+<xs:element name="status" type="tns:deceasedStatusChangeResponseCode"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="deceasedStatusChangeError">
+<xs:sequence>
+<xs:element name="code" type="xs:int"/>
+<xs:element name="message" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="verifyNIN">
+<xs:sequence>
+<xs:element minOccurs="0" name="request" type="tns:verifyNINType"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="verifyNINResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="status" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="verifyNINError">
+<xs:sequence>
+<xs:element name="code" type="xs:int"/>
+<xs:element name="message" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderForPublicServiceCommissionsWithBiometricAuth">
+<xs:sequence>
+<xs:element name="customHeader" type="tns:customHeaderType"/>
+<xs:element name="nin" type="tns:nin"/>
+<xs:element name="biometricData" type="tns:biometricDataType"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderForPublicServiceCommissionsWithBiometricAuthResponse">
+<xs:sequence>
+<xs:element name="searchResult" type="tns:citizenDataProviderWithBiometricAuthResults"/>
+<xs:element minOccurs="0" name="citizenData" type="tns:citizenDataWithAuth"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderForPublicServiceCommissionsWithBiometricAuthError">
+<xs:sequence>
+<xs:element name="code" type="xs:int"/>
+<xs:element name="message" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="generateVoterList">
+<xs:sequence>
+<xs:element minOccurs="0" name="request" type="tns:generateVoterListType"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="generateVoterListResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="searchResult" type="xs:string"/>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="voterList" nillable="true" type="tns:citizenData"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenData">
+<xs:sequence>
+<xs:element name="nin_loc" type="xs:string"/>
+<xs:element name="nin" type="xs:string"/>
+<xs:element name="first_name" type="xs:string"/>
+<xs:element minOccurs="0" name="middle_name" type="xs:string"/>
+<xs:element name="last_name" type="xs:string"/>
+<xs:element name="first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="middle_name_loc" type="xs:string"/>
+<xs:element name="last_name_loc" type="xs:string"/>
+<xs:element name="dob_loc" type="xs:string"/>
+<xs:element name="gender" type="xs:string"/>
+<xs:element name="gender_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="birth_district_place" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_state_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_district_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_rur_mun_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_ward_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="perm_village_tol_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="temp_state_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="temp_district_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="temp_rur_mun_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="temp_ward_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="temp_village_tol_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="cc_number" type="xs:string"/>
+<xs:element minOccurs="0" name="cc_number_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="cc_issuing_district_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="cc_issuing_date_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="cc_type_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="mobile_phone" type="xs:string"/>
+<xs:element minOccurs="0" name="telephone" type="xs:string"/>
+<xs:element minOccurs="0" name="f_first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="f_middle_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="f_last_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="m_first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="m_middle_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="m_last_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_middle_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gf_last_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_middle_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="gm_last_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="s_first_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="s_middle_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="s_last_name_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="education_level_loc" type="xs:string"/>
+<xs:element minOccurs="0" name="portrait_image" type="xs:base64Binary"/>
+<xs:element minOccurs="0" name="portrait_status" type="tns:portraitStatus"/>
+<xs:element minOccurs="0" name="signature" type="xs:base64Binary"/>
+<xs:element name="person_status" type="tns:personStatus"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="generateVoterListError">
+<xs:sequence>
+<xs:element name="code" type="xs:int"/>
+<xs:element name="message" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="requestNewNinRequest">
+<xs:sequence>
+<xs:element minOccurs="0" name="request" type="tns:requestNewNinRequestType"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="requestNewNinResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="result" type="xs:string"/>
+<xs:element minOccurs="0" name="caseNumber" type="xs:string"/>
+<xs:element minOccurs="0" name="nin" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="requestNewNinError">
+<xs:sequence>
+<xs:element name="code" type="xs:int"/>
+<xs:element name="message" type="xs:string"/>
+<xs:element minOccurs="0" name="caseNumber" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="dataConsultationWithCardAuth">
+<xs:sequence>
+<xs:element name="customHeader" type="tns:customHeaderType"/>
+<xs:element name="nin" type="tns:nin"/>
+<xs:element name="documentLogicalNumber">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="documentLogicalNumber" type="xs:string"/>
+<xs:element name="product" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="dateRange" type="tns:dateRange"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderForPublicServiceCommissionsWithCardAuth">
+<xs:sequence>
+<xs:element name="customHeader" type="tns:customHeaderType"/>
+<xs:element name="nin" type="tns:nin"/>
+<xs:element name="documentLogicalNumber">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="documentLogicalNumber" type="xs:string"/>
+<xs:element name="product" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="citizenDataProviderForLandRegistrationWithCardAuth">
+<xs:sequence>
+<xs:element name="customHeader" type="tns:customHeaderType"/>
+<xs:element name="nin" type="tns:nin"/>
+<xs:element name="documentLogicalNumber">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="documentLogicalNumber" type="xs:string"/>
+<xs:element name="product" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="dataConsultationWithCardAuthError">
+<xs:sequence>
+<xs:element name="code" type="xs:int"/>
+<xs:element name="message" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="dataConsultationWithBiometricAuth">
+<xs:sequence>
+<xs:element name="customHeader" type="tns:customHeaderType"/>
+<xs:element name="nin" type="tns:nin"/>
+<xs:element name="biometricData" type="tns:biometricDataType"/>
+<xs:element name="dateRange" type="tns:dateRange"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="dataConsultationWithBiometricAuthError">
+<xs:sequence>
+<xs:element name="code" type="xs:int"/>
+<xs:element name="message" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="dataConsultationWithCardAuthResponse">
+<xs:sequence>
+<xs:element name="status" type="tns:dataConsultationWithCardAuthResponseCode"/>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="consultationData" nillable="true" type="tns:consultationDataType"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="consultationDataType">
+<xs:sequence>
+<xs:element name="service" type="xs:string"/>
+<xs:element name="owner" type="xs:string"/>
+<xs:element name="host" type="xs:string"/>
+<xs:element name="timestamp" type="xs:dateTime"/>
+<xs:element name="businessResult" type="xs:string"/>
+<xs:element minOccurs="0" name="returnCode" type="xs:string"/>
+<xs:element minOccurs="0" name="errorDescription" type="xs:string"/>
+<xs:element minOccurs="0" name="demographicData" type="tns:demographicDataType"/>
+<xs:element minOccurs="0" name="ConsultationPurpose" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="dataConsultationWithBiometricAuthResponse">
+<xs:sequence>
+<xs:element name="status" type="tns:dataConsultationWithBiometricAuthResponseCode"/>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="consultationData" nillable="true" type="tns:consultationDataType"/>
+</xs:sequence>
+</xs:complexType>
+<xs:simpleType name="applicationStatusType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="APPROVED"/>
+<xs:enumeration value="NOT_APPROVED"/>
+<xs:enumeration value="IN_PROGRESS"/>
+<xs:enumeration value="TERMINATED"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="cardStatusType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="ISSUED"/>
+<xs:enumeration value="DISPATCHED"/>
+<xs:enumeration value="IN_PROGRESS"/>
+<xs:enumeration value="PLANNED_FOR_PRODUCTION"/>
+<xs:enumeration value="CARD_COULD_NOT_BE_PERSONALIZED"/>
+<xs:enumeration value="PERSONALIZED"/>
+<xs:enumeration value="DISPATCHED_FROM_DAO"/>
+<xs:enumeration value="RECEIVED AT DELIVERY LOCATION"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="rejectReasons">
+<xs:restriction base="xs:string">
+<xs:enumeration value="DOCUMENT_NOT_ISSUED"/>
+<xs:enumeration value="TECHNICAL_ERROR"/>
+<xs:enumeration value="UNKNOWN_IDENTITY"/>
+<xs:enumeration value="ENROLLED_DATA_NOT_APPROVED"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="fingerPosition">
+<xs:restriction base="xs:string">
+<xs:enumeration value="LEFT_THUMB"/>
+<xs:enumeration value="LEFT_INDEX"/>
+<xs:enumeration value="LEFT_MIDDLE"/>
+<xs:enumeration value="LEFT_RING"/>
+<xs:enumeration value="LEFT_LITTLE"/>
+<xs:enumeration value="RIGHT_THUMB"/>
+<xs:enumeration value="RIGHT_INDEX"/>
+<xs:enumeration value="RIGHT_MIDDLE"/>
+<xs:enumeration value="RIGHT_RING"/>
+<xs:enumeration value="RIGHT_LITTLE"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="imageType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="JPEG"/>
+<xs:enumeration value="TIFF"/>
+<xs:enumeration value="PNG"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="irisPosition">
+<xs:restriction base="xs:string">
+<xs:enumeration value="LEFT"/>
+<xs:enumeration value="RIGHT"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="citizenDataProviderWithBiometricAuthResults">
+<xs:restriction base="xs:string">
+<xs:enumeration value="NOT_FOUND"/>
+<xs:enumeration value="INVALIDATED"/>
+<xs:enumeration value="CANCELLED"/>
+<xs:enumeration value="REVOKED"/>
+<xs:enumeration value="DECEASED"/>
+<xs:enumeration value="BLACK_LISTED"/>
+<xs:enumeration value="NO_BIOMETRIC"/>
+<xs:enumeration value="NO_HIT"/>
+<xs:enumeration value="SUCCESS"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="citizenDataProviderWithCardAuthResults">
+<xs:restriction base="xs:string">
+<xs:enumeration value="NOT_AUTHENTICATED"/>
+<xs:enumeration value="INVALID_CARD"/>
+<xs:enumeration value="INVALIDATED"/>
+<xs:enumeration value="BLACK_LISTED"/>
+<xs:enumeration value="REVOKED"/>
+<xs:enumeration value="CANCELLED"/>
+<xs:enumeration value="DECEASED"/>
+<xs:enumeration value="NOT_FOUND"/>
+<xs:enumeration value="SUCCESS"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="cardAuthResult">
+<xs:restriction base="xs:string">
+<xs:enumeration value="AUTHENTICATED"/>
+<xs:enumeration value="NOT_AUTHENTICATED"/>
+<xs:enumeration value="INVALIDATED"/>
+<xs:enumeration value="CANCELLED"/>
+<xs:enumeration value="REVOKED"/>
+<xs:enumeration value="BLACK_LISTED"/>
+<xs:enumeration value="DECEASED"/>
+<xs:enumeration value="INVALID_CARD"/>
+<xs:enumeration value="NOT_FOUND"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="biometricAuthResult">
+<xs:restriction base="xs:string">
+<xs:enumeration value="HIT"/>
+<xs:enumeration value="NO_HIT"/>
+<xs:enumeration value="NO_BIOMETRIC"/>
+<xs:enumeration value="NOT_FOUND"/>
+<xs:enumeration value="INVALIDATED"/>
+<xs:enumeration value="CANCELLED"/>
+<xs:enumeration value="REVOKED"/>
+<xs:enumeration value="BLACK_LISTED"/>
+<xs:enumeration value="DECEASED"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="citizenDataProviderSearchResults">
+<xs:restriction base="xs:string">
+<xs:enumeration value="FOUND"/>
+<xs:enumeration value="NOT_FOUND"/>
+<xs:enumeration value="INVALIDATED"/>
+<xs:enumeration value="BLACK_LISTED"/>
+<xs:enumeration value="REVOKED"/>
+<xs:enumeration value="CANCELLED"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="portraitStatus">
+<xs:restriction base="xs:string">
+<xs:enumeration value="PRESENT"/>
+<xs:enumeration value="ABSENT"/>
+<xs:enumeration value="DAMAGED"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="matchOnCardResult">
+<xs:restriction base="xs:string">
+<xs:enumeration value="HIT"/>
+<xs:enumeration value="NO_HIT"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="logResult">
+<xs:restriction base="xs:string">
+<xs:enumeration value="SUCCESS"/>
+<xs:enumeration value="NOT_FOUND"/>
+<xs:enumeration value="INVALIDATED"/>
+<xs:enumeration value="CANCELLED"/>
+<xs:enumeration value="REVOKED"/>
+<xs:enumeration value="BLACK_LISTED"/>
+<xs:enumeration value="DECEASED"/>
+<xs:enumeration value="FAILURE"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="alphaAuthResult">
+<xs:restriction base="xs:string">
+<xs:enumeration value="HIT"/>
+<xs:enumeration value="NO_HIT"/>
+<xs:enumeration value="NOT_FOUND"/>
+<xs:enumeration value="INVALIDATED"/>
+<xs:enumeration value="CANCELLED"/>
+<xs:enumeration value="REVOKED"/>
+<xs:enumeration value="BLACK_LISTED"/>
+<xs:enumeration value="DECEASED"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="addressChangeReason">
+<xs:restriction base="xs:string">
+<xs:enumeration value="MIGRATION"/>
+<xs:enumeration value="MARRIAGE"/>
+<xs:enumeration value="DIVORCE"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="updateAddressResponseCode">
+<xs:restriction base="xs:string">
+<xs:enumeration value="SUCCESS"/>
+<xs:enumeration value="NOT_FOUND"/>
+<xs:enumeration value="INCORRECT_DEMOGRAPHIC_DATA"/>
+<xs:enumeration value="SAME_ADDRESS"/>
+<xs:enumeration value="WRONG_ADDRESS"/>
+<xs:enumeration value="BLACK_LISTED"/>
+<xs:enumeration value="REVOKED"/>
+<xs:enumeration value="CANCELLED"/>
+<xs:enumeration value="DECEASED"/>
+<xs:enumeration value="INVALIDATED"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="deceasedStatusChangeResponseCode">
+<xs:restriction base="xs:string">
+<xs:enumeration value="SUCCESS"/>
+<xs:enumeration value="NOT_FOUND"/>
+<xs:enumeration value="ALREADY_DECEASED"/>
+<xs:enumeration value="INCORRECT_DEMOGRAPHIC_DATA"/>
+<xs:enumeration value="INVALIDATED"/>
+<xs:enumeration value="CANCELLED"/>
+<xs:enumeration value="REVOKED"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="personStatus">
+<xs:restriction base="xs:string">
+<xs:enumeration value="VALID"/>
+<xs:enumeration value="GREY_LISTED"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="dateRange">
+<xs:restriction base="xs:string">
+<xs:enumeration value="LAST_WEEK"/>
+<xs:enumeration value="LAST_MONTH"/>
+<xs:enumeration value="LAST_THREE_MONTHS"/>
+<xs:enumeration value="LAST_SIX_MONTHS"/>
+<xs:enumeration value="LAST_YEAR"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="dataConsultationWithCardAuthResponseCode">
+<xs:restriction base="xs:string">
+<xs:enumeration value="NOT_AUTHENTICATED"/>
+<xs:enumeration value="INVALID_CARD"/>
+<xs:enumeration value="INVALIDATED"/>
+<xs:enumeration value="CANCELLED"/>
+<xs:enumeration value="REVOKED"/>
+<xs:enumeration value="BLACK_LISTED"/>
+<xs:enumeration value="DECEASED"/>
+<xs:enumeration value="NOT_FOUND"/>
+<xs:enumeration value="SUCCESS"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="dataConsultationWithBiometricAuthResponseCode">
+<xs:restriction base="xs:string">
+<xs:enumeration value="SUCCESS"/>
+<xs:enumeration value="NOT_FOUND"/>
+<xs:enumeration value="INVALID_PERSON"/>
+<xs:enumeration value="NO_BIOMETRIC"/>
+<xs:enumeration value="NO_HIT"/>
+<xs:enumeration value="INVALIDATED"/>
+<xs:enumeration value="CANCELLED"/>
+<xs:enumeration value="REVOKED"/>
+<xs:enumeration value="BLACK_LISTED"/>
+<xs:enumeration value="DECEASED"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>
+</wsdl:types>
+<wsdl:message name="deceasedStatusChangeResponse">
+<wsdl:part element="ns1:deceasedStatusChangeResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="CitizenDataProviderForPublicServiceCommissionsWithBiometricAuthError">
+<wsdl:part element="ns1:citizenDataProviderForPublicServiceCommissionsWithBiometricAuthError" name="CitizenDataProviderForPublicServiceCommissionsWithBiometricAuthError"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="MatchOnCardLogError">
+<wsdl:part element="ns1:matchOnCardLogError" name="MatchOnCardLogError"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="citizenDataProviderWithCardAuth">
+<wsdl:part element="ns1:citizenDataProviderWithCardAuth" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="AlphaAuthError">
+<wsdl:part element="ns1:alphaAuthError" name="AlphaAuthError"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="citizenDataProviderWithBiometricAuthResponse">
+<wsdl:part element="ns1:citizenDataProviderWithBiometricAuthResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="verifyNINResponse">
+<wsdl:part element="ns1:verifyNINResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="matchOnCardLog">
+<wsdl:part element="ns1:matchOnCardLog" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="citizenDataProviderWithBiometricAuth">
+<wsdl:part element="ns1:citizenDataProviderWithBiometricAuth" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="citizenDataProviderForLandRegistration">
+<wsdl:part element="ns1:citizenDataProviderForLandRegistration" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="addressUpdateResponse">
+<wsdl:part element="ns1:addressUpdateResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="requestNewNinRequest">
+<wsdl:part element="ns1:requestNewNinRequest" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="checkCitizenRequestStatus">
+<wsdl:part element="ns1:checkCitizenRequestStatus" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="DeceasedStatusChangeError">
+<wsdl:part element="ns1:deceasedStatusChangeError" name="DeceasedStatusChangeError"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="citizenDataProviderForLandRegistrationWithBiometricAuthResponse">
+<wsdl:part element="ns1:citizenDataProviderForLandRegistrationWithBiometricAuthResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="citizenDataProviderWithCardAuthResponse">
+<wsdl:part element="ns1:citizenDataProviderWithCardAuthResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="cardAuth">
+<wsdl:part element="ns1:cardAuth" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="citizenDataProviderForPublicServiceCommissions">
+<wsdl:part element="ns1:citizenDataProviderForPublicServiceCommissions" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="citizenDataProviderForLandRegistrationResponse">
+<wsdl:part element="ns1:citizenDataProviderForLandRegistrationResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="CitizenDataProviderForPublicServiceCommissionsWithCardAuthError">
+<wsdl:part element="ns1:citizenDataProviderForPublicServiceCommissionsWithCardAuthError" name="CitizenDataProviderForPublicServiceCommissionsWithCardAuthError"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="CitizenDataProviderForLandRegistrationWithBiometricAuthError">
+<wsdl:part element="ns1:citizenDataProviderForLandRegistrationWithBiometricAuthError" name="CitizenDataProviderForLandRegistrationWithBiometricAuthError"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="CitizenDataProviderWithCardAuthError">
+<wsdl:part element="ns1:citizenDataProviderWithCardAuthError" name="CitizenDataProviderWithCardAuthError"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="alphaAuth">
+<wsdl:part element="ns1:alphaAuth" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="BiometricAuthError">
+<wsdl:part element="ns1:biometricAuthError" name="BiometricAuthError"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="verifyNIN">
+<wsdl:part element="ns1:verifyNIN" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="citizenDataProviderForPublicServiceCommissionsWithBiometricAuthResponse">
+<wsdl:part element="ns1:citizenDataProviderForPublicServiceCommissionsWithBiometricAuthResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="generateVoterList">
+<wsdl:part element="ns1:generateVoterList" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="checkCitizenRequestStatusResponse">
+<wsdl:part element="ns1:checkCitizenRequestStatusResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="citizenDataProviderForPublicServiceCommissionsWithCardAuthResponse">
+<wsdl:part element="ns1:citizenDataProviderForPublicServiceCommissionsWithCardAuthResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="CitizenDataProviderError">
+<wsdl:part element="ns1:citizenDataProviderError" name="CitizenDataProviderError"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="biometricAuthResponse">
+<wsdl:part element="ns1:biometricAuthResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="CardAuthError">
+<wsdl:part element="ns1:cardAuthError" name="CardAuthError"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="CitizenDataProviderForLandRegistrationWithCardAuthError">
+<wsdl:part element="ns1:citizenDataProviderForLandRegistrationWithCardAuthError" name="CitizenDataProviderForLandRegistrationWithCardAuthError"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="biometricAuth">
+<wsdl:part element="ns1:biometricAuth" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="AddressUpdateError">
+<wsdl:part element="ns1:addressUpdateError" name="AddressUpdateError"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="CheckCitizenRequestStatusError">
+<wsdl:part element="ns1:checkCitizenRequestStatusError" name="CheckCitizenRequestStatusError"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="citizenDataProviderForLandRegistrationWithCardAuthResponse">
+<wsdl:part element="ns1:citizenDataProviderForLandRegistrationWithCardAuthResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="addressUpdate">
+<wsdl:part element="ns1:addressUpdate" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="citizenDataProviderForLandRegistrationWithCardAuth">
+<wsdl:part element="ns1:citizenDataProviderForLandRegistrationWithCardAuth" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="deceasedStatusChange">
+<wsdl:part element="ns1:deceasedStatusChange" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="requestNewNinRequestResponse">
+<wsdl:part element="ns1:requestNewNinResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="matchOnCardLogResponse">
+<wsdl:part element="ns1:matchOnCardLogResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="CitizenDataProviderWithBiometricAuthError">
+<wsdl:part element="ns1:citizenDataProviderWithBiometricAuthError" name="CitizenDataProviderWithBiometricAuthError"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="citizenDataProviderForPublicServiceCommissionsWithBiometricAuth">
+<wsdl:part element="ns1:citizenDataProviderForPublicServiceCommissionsWithBiometricAuth" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="citizenDataProviderForLandRegistrationWithBiometricAuth">
+<wsdl:part element="ns1:citizenDataProviderForLandRegistrationWithBiometricAuth" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="alphaAuthResponse">
+<wsdl:part element="ns1:alphaAuthResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="GenerateVoterListError">
+<wsdl:part element="ns1:generateVoterListError" name="GenerateVoterListError"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="citizenDataProviderForPublicServiceCommissionsResponse">
+<wsdl:part element="ns1:citizenDataProviderForPublicServiceCommissionsResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="RequestNewNinError">
+<wsdl:part element="ns1:requestNewNinError" name="RequestNewNinError"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="citizenDataProviderForPublicServiceCommissionsWithCardAuth">
+<wsdl:part element="ns1:citizenDataProviderForPublicServiceCommissionsWithCardAuth" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="VerifyNINError">
+<wsdl:part element="ns1:verifyNINError" name="VerifyNINError"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="cardAuthResponse">
+<wsdl:part element="ns1:cardAuthResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="generateVoterListResponse">
+<wsdl:part element="ns1:generateVoterListResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:portType name="EServiceG2G">
+<wsdl:operation name="checkCitizenRequestStatus">
+<wsdl:input message="tns:checkCitizenRequestStatus" name="checkCitizenRequestStatus"> </wsdl:input>
+<wsdl:output message="tns:checkCitizenRequestStatusResponse" name="checkCitizenRequestStatusResponse"> </wsdl:output>
+<wsdl:fault message="tns:CheckCitizenRequestStatusError" name="CheckCitizenRequestStatusError"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="citizenDataProviderForLandRegistrationWithBiometricAuth">
+<wsdl:input message="tns:citizenDataProviderForLandRegistrationWithBiometricAuth" name="citizenDataProviderForLandRegistrationWithBiometricAuth"> </wsdl:input>
+<wsdl:output message="tns:citizenDataProviderForLandRegistrationWithBiometricAuthResponse" name="citizenDataProviderForLandRegistrationWithBiometricAuthResponse"> </wsdl:output>
+<wsdl:fault message="tns:CitizenDataProviderForLandRegistrationWithBiometricAuthError" name="CitizenDataProviderForLandRegistrationWithBiometricAuthError"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="citizenDataProviderWithCardAuth">
+<wsdl:input message="tns:citizenDataProviderWithCardAuth" name="citizenDataProviderWithCardAuth"> </wsdl:input>
+<wsdl:output message="tns:citizenDataProviderWithCardAuthResponse" name="citizenDataProviderWithCardAuthResponse"> </wsdl:output>
+<wsdl:fault message="tns:CitizenDataProviderWithCardAuthError" name="CitizenDataProviderWithCardAuthError"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="cardAuth">
+<wsdl:input message="tns:cardAuth" name="cardAuth"> </wsdl:input>
+<wsdl:output message="tns:cardAuthResponse" name="cardAuthResponse"> </wsdl:output>
+<wsdl:fault message="tns:CardAuthError" name="CardAuthError"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="biometricAuth">
+<wsdl:input message="tns:biometricAuth" name="biometricAuth"> </wsdl:input>
+<wsdl:output message="tns:biometricAuthResponse" name="biometricAuthResponse"> </wsdl:output>
+<wsdl:fault message="tns:BiometricAuthError" name="BiometricAuthError"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="citizenDataProviderForPublicServiceCommissions">
+<wsdl:input message="tns:citizenDataProviderForPublicServiceCommissions" name="citizenDataProviderForPublicServiceCommissions"> </wsdl:input>
+<wsdl:output message="tns:citizenDataProviderForPublicServiceCommissionsResponse" name="citizenDataProviderForPublicServiceCommissionsResponse"> </wsdl:output>
+<wsdl:fault message="tns:CitizenDataProviderError" name="CitizenDataProviderError"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="matchOnCardLog">
+<wsdl:input message="tns:matchOnCardLog" name="matchOnCardLog"> </wsdl:input>
+<wsdl:output message="tns:matchOnCardLogResponse" name="matchOnCardLogResponse"> </wsdl:output>
+<wsdl:fault message="tns:MatchOnCardLogError" name="MatchOnCardLogError"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="citizenDataProviderForPublicServiceCommissionsWithCardAuth">
+<wsdl:input message="tns:citizenDataProviderForPublicServiceCommissionsWithCardAuth" name="citizenDataProviderForPublicServiceCommissionsWithCardAuth"> </wsdl:input>
+<wsdl:output message="tns:citizenDataProviderForPublicServiceCommissionsWithCardAuthResponse" name="citizenDataProviderForPublicServiceCommissionsWithCardAuthResponse"> </wsdl:output>
+<wsdl:fault message="tns:CitizenDataProviderForPublicServiceCommissionsWithCardAuthError" name="CitizenDataProviderForPublicServiceCommissionsWithCardAuthError"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="citizenDataProviderWithBiometricAuth">
+<wsdl:input message="tns:citizenDataProviderWithBiometricAuth" name="citizenDataProviderWithBiometricAuth"> </wsdl:input>
+<wsdl:output message="tns:citizenDataProviderWithBiometricAuthResponse" name="citizenDataProviderWithBiometricAuthResponse"> </wsdl:output>
+<wsdl:fault message="tns:CitizenDataProviderWithBiometricAuthError" name="CitizenDataProviderWithBiometricAuthError"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="citizenDataProviderForLandRegistration">
+<wsdl:input message="tns:citizenDataProviderForLandRegistration" name="citizenDataProviderForLandRegistration"> </wsdl:input>
+<wsdl:output message="tns:citizenDataProviderForLandRegistrationResponse" name="citizenDataProviderForLandRegistrationResponse"> </wsdl:output>
+<wsdl:fault message="tns:CitizenDataProviderError" name="CitizenDataProviderError"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="alphaAuth">
+<wsdl:input message="tns:alphaAuth" name="alphaAuth"> </wsdl:input>
+<wsdl:output message="tns:alphaAuthResponse" name="alphaAuthResponse"> </wsdl:output>
+<wsdl:fault message="tns:AlphaAuthError" name="AlphaAuthError"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="addressUpdate">
+<wsdl:input message="tns:addressUpdate" name="addressUpdate"> </wsdl:input>
+<wsdl:output message="tns:addressUpdateResponse" name="addressUpdateResponse"> </wsdl:output>
+<wsdl:fault message="tns:AddressUpdateError" name="AddressUpdateError"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="citizenDataProviderForLandRegistrationWithCardAuth">
+<wsdl:input message="tns:citizenDataProviderForLandRegistrationWithCardAuth" name="citizenDataProviderForLandRegistrationWithCardAuth"> </wsdl:input>
+<wsdl:output message="tns:citizenDataProviderForLandRegistrationWithCardAuthResponse" name="citizenDataProviderForLandRegistrationWithCardAuthResponse"> </wsdl:output>
+<wsdl:fault message="tns:CitizenDataProviderForLandRegistrationWithCardAuthError" name="CitizenDataProviderForLandRegistrationWithCardAuthError"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="deceasedStatusChange">
+<wsdl:input message="tns:deceasedStatusChange" name="deceasedStatusChange"> </wsdl:input>
+<wsdl:output message="tns:deceasedStatusChangeResponse" name="deceasedStatusChangeResponse"> </wsdl:output>
+<wsdl:fault message="tns:DeceasedStatusChangeError" name="DeceasedStatusChangeError"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="verifyNIN">
+<wsdl:input message="tns:verifyNIN" name="verifyNIN"> </wsdl:input>
+<wsdl:output message="tns:verifyNINResponse" name="verifyNINResponse"> </wsdl:output>
+<wsdl:fault message="tns:VerifyNINError" name="VerifyNINError"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="citizenDataProviderForPublicServiceCommissionsWithBiometricAuth">
+<wsdl:input message="tns:citizenDataProviderForPublicServiceCommissionsWithBiometricAuth" name="citizenDataProviderForPublicServiceCommissionsWithBiometricAuth"> </wsdl:input>
+<wsdl:output message="tns:citizenDataProviderForPublicServiceCommissionsWithBiometricAuthResponse" name="citizenDataProviderForPublicServiceCommissionsWithBiometricAuthResponse"> </wsdl:output>
+<wsdl:fault message="tns:CitizenDataProviderForPublicServiceCommissionsWithBiometricAuthError" name="CitizenDataProviderForPublicServiceCommissionsWithBiometricAuthError"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="generateVoterList">
+<wsdl:input message="tns:generateVoterList" name="generateVoterList"> </wsdl:input>
+<wsdl:output message="tns:generateVoterListResponse" name="generateVoterListResponse"> </wsdl:output>
+<wsdl:fault message="tns:GenerateVoterListError" name="GenerateVoterListError"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="requestNewNinRequest">
+<wsdl:input message="tns:requestNewNinRequest" name="requestNewNinRequest"> </wsdl:input>
+<wsdl:output message="tns:requestNewNinRequestResponse" name="requestNewNinRequestResponse"> </wsdl:output>
+<wsdl:fault message="tns:RequestNewNinError" name="RequestNewNinError"> </wsdl:fault>
+</wsdl:operation>
+</wsdl:portType>
+<wsdl:binding name="OnlineEservicesSoapBinding" type="tns:EServiceG2G">
+<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+<wsdl:operation name="citizenDataProviderForLandRegistrationWithBiometricAuth">
+<soap:operation soapAction="citizenDataProviderForLandRegistrationWithBiometricAuth" style="document"/>
+<wsdl:input name="citizenDataProviderForLandRegistrationWithBiometricAuth">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="citizenDataProviderForLandRegistrationWithBiometricAuthResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="CitizenDataProviderForLandRegistrationWithBiometricAuthError">
+<soap:fault name="CitizenDataProviderForLandRegistrationWithBiometricAuthError" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="checkCitizenRequestStatus">
+<soap:operation soapAction="checkCitizenRequstStatus" style="document"/>
+<wsdl:input name="checkCitizenRequestStatus">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="checkCitizenRequestStatusResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="CheckCitizenRequestStatusError">
+<soap:fault name="CheckCitizenRequestStatusError" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="citizenDataProviderWithCardAuth">
+<soap:operation soapAction="citizenDataProviderWithCardAuth" style="document"/>
+<wsdl:input name="citizenDataProviderWithCardAuth">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="citizenDataProviderWithCardAuthResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="CitizenDataProviderWithCardAuthError">
+<soap:fault name="CitizenDataProviderWithCardAuthError" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="biometricAuth">
+<soap:operation soapAction="biometricAuth" style="document"/>
+<wsdl:input name="biometricAuth">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="biometricAuthResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="BiometricAuthError">
+<soap:fault name="BiometricAuthError" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="cardAuth">
+<soap:operation soapAction="cardAuth" style="document"/>
+<wsdl:input name="cardAuth">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="cardAuthResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="CardAuthError">
+<soap:fault name="CardAuthError" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="citizenDataProviderForPublicServiceCommissions">
+<soap:operation soapAction="citizenDataProviderForPublicServiceCommissions" style="document"/>
+<wsdl:input name="citizenDataProviderForPublicServiceCommissions">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="citizenDataProviderForPublicServiceCommissionsResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="CitizenDataProviderError">
+<soap:fault name="CitizenDataProviderError" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="matchOnCardLog">
+<soap:operation soapAction="matchOnCardLog" style="document"/>
+<wsdl:input name="matchOnCardLog">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="matchOnCardLogResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="MatchOnCardLogError">
+<soap:fault name="MatchOnCardLogError" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="citizenDataProviderForPublicServiceCommissionsWithCardAuth">
+<soap:operation soapAction="citizenDataProviderForPublicServiceCommissionsWithCardAuth" style="document"/>
+<wsdl:input name="citizenDataProviderForPublicServiceCommissionsWithCardAuth">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="citizenDataProviderForPublicServiceCommissionsWithCardAuthResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="CitizenDataProviderForPublicServiceCommissionsWithCardAuthError">
+<soap:fault name="CitizenDataProviderForPublicServiceCommissionsWithCardAuthError" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="citizenDataProviderWithBiometricAuth">
+<soap:operation soapAction="citizenDataProviderWithBiometricAuth" style="document"/>
+<wsdl:input name="citizenDataProviderWithBiometricAuth">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="citizenDataProviderWithBiometricAuthResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="CitizenDataProviderWithBiometricAuthError">
+<soap:fault name="CitizenDataProviderWithBiometricAuthError" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="citizenDataProviderForLandRegistration">
+<soap:operation soapAction="citizenDataProviderForLandRegistration" style="document"/>
+<wsdl:input name="citizenDataProviderForLandRegistration">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="citizenDataProviderForLandRegistrationResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="CitizenDataProviderError">
+<soap:fault name="CitizenDataProviderError" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="alphaAuth">
+<soap:operation soapAction="alphaAuth" style="document"/>
+<wsdl:input name="alphaAuth">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="alphaAuthResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="AlphaAuthError">
+<soap:fault name="AlphaAuthError" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="addressUpdate">
+<soap:operation soapAction="addressUpdate" style="document"/>
+<wsdl:input name="addressUpdate">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="addressUpdateResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="AddressUpdateError">
+<soap:fault name="AddressUpdateError" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="citizenDataProviderForLandRegistrationWithCardAuth">
+<soap:operation soapAction="citizenDataProviderForLandRegistrationWithCardAuth" style="document"/>
+<wsdl:input name="citizenDataProviderForLandRegistrationWithCardAuth">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="citizenDataProviderForLandRegistrationWithCardAuthResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="CitizenDataProviderForLandRegistrationWithCardAuthError">
+<soap:fault name="CitizenDataProviderForLandRegistrationWithCardAuthError" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="deceasedStatusChange">
+<soap:operation soapAction="deceasedStatusChange" style="document"/>
+<wsdl:input name="deceasedStatusChange">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="deceasedStatusChangeResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="DeceasedStatusChangeError">
+<soap:fault name="DeceasedStatusChangeError" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="verifyNIN">
+<soap:operation soapAction="verifyNIN" style="document"/>
+<wsdl:input name="verifyNIN">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="verifyNINResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="VerifyNINError">
+<soap:fault name="VerifyNINError" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="citizenDataProviderForPublicServiceCommissionsWithBiometricAuth">
+<soap:operation soapAction="citizenDataProviderForPublicServiceCommissionsWithBiometricAuth" style="document"/>
+<wsdl:input name="citizenDataProviderForPublicServiceCommissionsWithBiometricAuth">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="citizenDataProviderForPublicServiceCommissionsWithBiometricAuthResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="CitizenDataProviderForPublicServiceCommissionsWithBiometricAuthError">
+<soap:fault name="CitizenDataProviderForPublicServiceCommissionsWithBiometricAuthError" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="generateVoterList">
+<soap:operation soapAction="generateVoterList" style="document"/>
+<wsdl:input name="generateVoterList">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="generateVoterListResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="GenerateVoterListError">
+<soap:fault name="GenerateVoterListError" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="requestNewNinRequest">
+<soap:operation soapAction="requestNewNIN" style="document"/>
+<wsdl:input name="requestNewNinRequest">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="requestNewNinRequestResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="RequestNewNinError">
+<soap:fault name="RequestNewNinError" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:service name="OnlineEservices">
+<wsdl:port binding="tns:OnlineEservicesSoapBinding" name="EServiceG2GPort">
+<soap:address location="https://pmo.eservices.central.nids.gov.np/EServices/services/g2g"/>
+</wsdl:port>
+</wsdl:service>
+</wsdl:definitions>

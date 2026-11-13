@@ -1,0 +1,120 @@
+plugins {
+	id 'java'
+	id 'war'
+	id 'org.springframework.boot' version '3.5.6'
+	id 'io.spring.dependency-management' version '1.1.7'
+	// id 'com.intershop.gradle.jaxb' version '4.0.0'
+	// id 'org.jvnet.jaxb2' version '0.15.0'
+}
+
+group = 'com.pmo'
+version = '0.0.1-SNAPSHOT'
+description = 'NID integration'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+// jaxb {
+//     javaGen {
+//         'pension' {
+//         	schema = file("src/main/resources/nid-wsdl.wsdl")
+//         	packageName = "com.pmo.nid.soap.schemas"
+// 			outputDir = file("src/main/java")
+//         	sourceSetName = 'main'
+// 			args = ["-wsdl"]
+//     	}
+//     }
+// }
+
+// jaxb {
+//     produces 'java'
+//     bindings {
+//         'pension' {
+//             wsdl = file("src/main/resources/nid-wsdl.wsdl")
+//             packageName = 'com.pmo.nid.soap.schemas'
+//             args = ["-XJsr303Annotations", "-Xannotate"]
+//         }
+//     }
+// }
+
+repositories {
+	mavenCentral()
+}
+
+configurations {
+    jaxb
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-web-services'
+	implementation 'wsdl4j:wsdl4j:1.6.3'
+
+	implementation 'jakarta.xml.bind:jakarta.xml.bind-api:4.0.0'
+   	// implementation 'com.sun.xml.bind:jaxb-impl:4.0.2'
+   	// implementation 'com.sun.xml.bind:jaxb-core:4.0.2'
+
+	// implementation 'javax.xml.bind:jaxb-api:2.3.1'
+   	// implementation 'com.sun.xml.bind:jaxb-xjc:2.3.3'
+   	// implementation 'com.sun.xml.bind:jaxb-impl:2.3.3'
+   	// implementation 'com.sun.xml.bind:jaxb-core:2.3.0.1'
+	compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// jaxb 'javax.xml.bind:jaxb-api:2.3.1'
+    // jaxb 'com.sun.xml.bind:jaxb-impl:2.3.3'
+    // jaxb 'com.sun.xml.bind:jaxb-core:2.3.0.1'
+    // jaxb 'javax.activation:activation:1.1.1'
+	// jaxb 'com.sun.xml.bind:jaxb-xjc:2.3.3'
+
+	// jaxb 'jakarta.xml.bind:jakarta.xml.bind-api:4.0.0'
+    // jaxb 'com.sun.xml.bind:jaxb-impl:4.0.2'
+    // jaxb 'com.sun.xml.bind:jaxb-core:4.0.2'
+    // jaxb 'com.sun.xml.bind:jaxb-xjc:4.0.2'
+
+	// jaxb 'org.glassfish.jaxb:jaxb-xjc:4.0.2'
+    // jaxb 'org.glassfish.jaxb:jaxb-runtime:4.0.2'
+    // jaxb 'org.jvnet.jaxb2_commons:jaxb2-basics-ant:1.11.1'
+    // jaxb 'org.jvnet.jaxb2_commons:jaxb2-basics:1.11.1'
+    // jaxb 'org.jvnet.jaxb2_commons:jaxb2-basics-tools:1.11.1'
+	// jaxb 'org.jvnet.jaxb2_commons:jaxb2-annotate-plugin:1.1.0'
+    // jaxb 'javax.validation:validation-api:2.0.1.Final'
+
+	jaxb 'org.glassfish.jaxb:jaxb-xjc:4.0.2'
+	jaxb 'org.glassfish.jaxb:jaxb-runtime:4.0.2'
+}
+
+task generateJaxb(type: JavaExec) {
+        group = 'JAXB'
+        description = 'Generates Java classes from WSDL using XJC'
+   
+        // Ensure the output directory exists
+        doFirst {
+            file("src/main/java/com/pmo/nid/soap/schemas").mkdirs()
+        }
+   
+        // Set the classpath for the XJC tool
+        classpath = configurations.jaxb
+   
+        // Set the main class to run
+        main = 'com.sun.tools.xjc.Driver'
+   
+        // Set the arguments for the XJC tool
+        args = [
+            '-d', 'src/main/java',
+            '-p', 'com.pmo.nid.soap.schemas',
+            '-wsdl', 'src/main/resources/nid-wsdl.wsdl'
+        ]
+}
+
+compileJava.dependsOn generateJaxb
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
